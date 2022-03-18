@@ -1,3 +1,5 @@
 # gql-with-bytes
 
-This sample proofs you can return plain json obj when you define your own bytes handler
+This sample proofs you can return plain json object in go as well like you do in nodejs when you define your own json/[]byte handler
+
+![result](/results/result.png)
