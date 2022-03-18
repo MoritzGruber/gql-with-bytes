@@ -1,0 +1,25 @@
+scalar Any
+scalar Bytes
+
+extend type Query {
+  GetSomething: GetSomethingResponse
+}
+
+input GetUsageOfBlueprintFieldRequestInput {
+  projectId: String
+  blueprintFieldId: String
+  environmentId: String
+  blueprintBranch: String
+}
+
+type GetSomethingResponse {
+  someAny: Any
+  someObj: Bytes
+  someBool: Bytes
+  someString: Bytes
+  someInt: Bytes
+  someFloat: Bytes
+  someWillFail: Bytes
+  someWillFailToo: Bytes
+}
+
