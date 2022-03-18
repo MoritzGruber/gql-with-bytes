@@ -1,5 +1,5 @@
 scalar Any
-scalar Bytes
+scalar JSON
 
 extend type Query {
   GetSomething: GetSomethingResponse
@@ -14,12 +14,12 @@ input GetUsageOfBlueprintFieldRequestInput {
 
 type GetSomethingResponse {
   someAny: Any
-  someObj: Bytes
-  someBool: Bytes
-  someString: Bytes
-  someInt: Bytes
-  someFloat: Bytes
-  someWillFail: Bytes
-  someWillFailToo: Bytes
+  someObj: JSON
+  someBool: JSON
+  someString: JSON
+  someInt: JSON
+  someFloat: JSON
+  someWillFail: JSON
+  someWillFailToo: JSON
 }
 

@@ -7,14 +7,14 @@ import (
 )
 
 type GetSomethingResponse struct {
-	SomeAny         interface{}  `json:"someAny"`
-	SomeObj         scalar.Bytes `json:"someObj"`
-	SomeBool        scalar.Bytes `json:"someBool"`
-	SomeString      scalar.Bytes `json:"someString"`
-	SomeInt         scalar.Bytes `json:"someInt"`
-	SomeFloat       scalar.Bytes `json:"someFloat"`
-	SomeWillFail    scalar.Bytes `json:"someWillFail"`
-	SomeWillFailToo scalar.Bytes `json:"someWillFailToo"`
+	SomeAny         interface{} `json:"someAny"`
+	SomeObj         scalar.JSON `json:"someObj"`
+	SomeBool        scalar.JSON `json:"someBool"`
+	SomeString      scalar.JSON `json:"someString"`
+	SomeInt         scalar.JSON `json:"someInt"`
+	SomeFloat       scalar.JSON `json:"someFloat"`
+	SomeWillFail    scalar.JSON `json:"someWillFail"`
+	SomeWillFailToo scalar.JSON `json:"someWillFailToo"`
 }
 
 type GetUsageOfBlueprintFieldRequestInput struct {

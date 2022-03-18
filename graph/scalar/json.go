@@ -4,15 +4,15 @@ import (
 	"io"
 )
 
-type Bytes []byte
+type JSON []byte
 
 // UnmarshalGQL implements the graphql.Unmarshaler interface
-func (value *Bytes) UnmarshalGQL(v interface{}) error {
+func (value *JSON) UnmarshalGQL(v interface{}) error {
 	// we do not need this
 	return nil
 }
 
 // MarshalGQL implements the graphql.Marshaler interface
-func (value Bytes) MarshalGQL(w io.Writer) {
+func (value JSON) MarshalGQL(w io.Writer) {
 	w.Write(value)
 }

@@ -191,7 +191,7 @@ func (ec *executionContext) introspectType(name string) (*introspection.Type, er
 
 var sources = []*ast.Source{
 	{Name: "graph/schema.graphqls", Input: `scalar Any
-scalar Bytes
+scalar JSON
 
 extend type Query {
   GetSomething: GetSomethingResponse
@@ -206,13 +206,13 @@ input GetUsageOfBlueprintFieldRequestInput {
 
 type GetSomethingResponse {
   someAny: Any
-  someObj: Bytes
-  someBool: Bytes
-  someString: Bytes
-  someInt: Bytes
-  someFloat: Bytes
-  someWillFail: Bytes
-  someWillFailToo: Bytes
+  someObj: JSON
+  someBool: JSON
+  someString: JSON
+  someInt: JSON
+  someFloat: JSON
+  someWillFail: JSON
+  someWillFailToo: JSON
 }
 
 `, BuiltIn: false},
@@ -335,9 +335,9 @@ func (ec *executionContext) _GetSomethingResponse_someObj(ctx context.Context, f
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(scalar.Bytes)
+	res := resTmp.(scalar.JSON)
 	fc.Result = res
-	return ec.marshalOBytes2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐBytes(ctx, field.Selections, res)
+	return ec.marshalOJSON2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐJSON(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _GetSomethingResponse_someBool(ctx context.Context, field graphql.CollectedField, obj *model.GetSomethingResponse) (ret graphql.Marshaler) {
@@ -367,9 +367,9 @@ func (ec *executionContext) _GetSomethingResponse_someBool(ctx context.Context, 
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(scalar.Bytes)
+	res := resTmp.(scalar.JSON)
 	fc.Result = res
-	return ec.marshalOBytes2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐBytes(ctx, field.Selections, res)
+	return ec.marshalOJSON2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐJSON(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _GetSomethingResponse_someString(ctx context.Context, field graphql.CollectedField, obj *model.GetSomethingResponse) (ret graphql.Marshaler) {
@@ -399,9 +399,9 @@ func (ec *executionContext) _GetSomethingResponse_someString(ctx context.Context
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(scalar.Bytes)
+	res := resTmp.(scalar.JSON)
 	fc.Result = res
-	return ec.marshalOBytes2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐBytes(ctx, field.Selections, res)
+	return ec.marshalOJSON2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐJSON(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _GetSomethingResponse_someInt(ctx context.Context, field graphql.CollectedField, obj *model.GetSomethingResponse) (ret graphql.Marshaler) {
@@ -431,9 +431,9 @@ func (ec *executionContext) _GetSomethingResponse_someInt(ctx context.Context, f
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(scalar.Bytes)
+	res := resTmp.(scalar.JSON)
 	fc.Result = res
-	return ec.marshalOBytes2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐBytes(ctx, field.Selections, res)
+	return ec.marshalOJSON2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐJSON(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _GetSomethingResponse_someFloat(ctx context.Context, field graphql.CollectedField, obj *model.GetSomethingResponse) (ret graphql.Marshaler) {
@@ -463,9 +463,9 @@ func (ec *executionContext) _GetSomethingResponse_someFloat(ctx context.Context,
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(scalar.Bytes)
+	res := resTmp.(scalar.JSON)
 	fc.Result = res
-	return ec.marshalOBytes2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐBytes(ctx, field.Selections, res)
+	return ec.marshalOJSON2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐJSON(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _GetSomethingResponse_someWillFail(ctx context.Context, field graphql.CollectedField, obj *model.GetSomethingResponse) (ret graphql.Marshaler) {
@@ -495,9 +495,9 @@ func (ec *executionContext) _GetSomethingResponse_someWillFail(ctx context.Conte
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(scalar.Bytes)
+	res := resTmp.(scalar.JSON)
 	fc.Result = res
-	return ec.marshalOBytes2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐBytes(ctx, field.Selections, res)
+	return ec.marshalOJSON2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐJSON(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _GetSomethingResponse_someWillFailToo(ctx context.Context, field graphql.CollectedField, obj *model.GetSomethingResponse) (ret graphql.Marshaler) {
@@ -527,9 +527,9 @@ func (ec *executionContext) _GetSomethingResponse_someWillFailToo(ctx context.Co
 	if resTmp == nil {
 		return graphql.Null
 	}
-	res := resTmp.(scalar.Bytes)
+	res := resTmp.(scalar.JSON)
 	fc.Result = res
-	return ec.marshalOBytes2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐBytes(ctx, field.Selections, res)
+	return ec.marshalOJSON2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐJSON(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Query_GetSomething(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
@@ -2765,27 +2765,27 @@ func (ec *executionContext) marshalOBoolean2ᚖbool(ctx context.Context, sel ast
 	return res
 }
 
-func (ec *executionContext) unmarshalOBytes2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐBytes(ctx context.Context, v interface{}) (scalar.Bytes, error) {
-	if v == nil {
-		return nil, nil
-	}
-	var res scalar.Bytes
-	err := res.UnmarshalGQL(v)
-	return res, graphql.ErrorOnPath(ctx, err)
-}
-
-func (ec *executionContext) marshalOBytes2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐBytes(ctx context.Context, sel ast.SelectionSet, v scalar.Bytes) graphql.Marshaler {
-	if v == nil {
-		return graphql.Null
-	}
-	return v
-}
-
 func (ec *executionContext) marshalOGetSomethingResponse2ᚖgithubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋmodelᚐGetSomethingResponse(ctx context.Context, sel ast.SelectionSet, v *model.GetSomethingResponse) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return ec._GetSomethingResponse(ctx, sel, v)
+}
+
+func (ec *executionContext) unmarshalOJSON2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐJSON(ctx context.Context, v interface{}) (scalar.JSON, error) {
+	if v == nil {
+		return nil, nil
+	}
+	var res scalar.JSON
+	err := res.UnmarshalGQL(v)
+	return res, graphql.ErrorOnPath(ctx, err)
+}
+
+func (ec *executionContext) marshalOJSON2githubᚗcomᚋMoritzGruberᚋgqlᚑwithᚑbytesᚋgraphᚋscalarᚐJSON(ctx context.Context, sel ast.SelectionSet, v scalar.JSON) graphql.Marshaler {
+	if v == nil {
+		return graphql.Null
+	}
+	return v
 }
 
 func (ec *executionContext) unmarshalOString2ᚖstring(ctx context.Context, v interface{}) (*string, error) {

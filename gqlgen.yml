@@ -54,6 +54,6 @@ models:
       - github.com/99designs/gqlgen/graphql.Int
       - github.com/99designs/gqlgen/graphql.Int64
       - github.com/99designs/gqlgen/graphql.Int32
-  Bytes:
+  JSON:
     model:
-      - github.com/MoritzGruber/gql-with-bytes/graph/scalar.Bytes
+      - github.com/MoritzGruber/gql-with-bytes/graph/scalar.JSON
